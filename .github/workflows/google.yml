@@ -9,7 +9,7 @@ on:
 
 defaults:
   run:
-    working-directory: omegatrade-app/backend/
+    working-directory: backend/
 
 jobs:
   build:
