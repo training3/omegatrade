@@ -21,7 +21,7 @@ jobs:
         uses: actions/checkout@master
 
       - name: Setup GCP Service Account
-        uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
+        uses: 'google-github-actions/setup-gcloud@v0'
         with:
           version: 'latest'
           service_account_email: ${{ secrets.GCP_SA_EMAIL }}
@@ -44,7 +44,7 @@ jobs:
         run: |
           gcloud run deploy omegatrade-backend-dev-ga \
           --region us-west1 \
-          --image gcr.io/{enter-your-GCP-Project-ID}/omega-trade/dev/backend \
+          --image gcr.io/playground-s-11-99cd1b20/omega-trade/dev/backend \
           --platform managed \
           --allow-unauthenticated \
           --project playground-s-11-99cd1b20 \
